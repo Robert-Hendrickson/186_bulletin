@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/186_bulletin/css/inputs.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="inputWrapper">
+            <div id="Presiding">
+                <label>Presiding:</label>
+                <input type="text" />
+            </div>
+            <div id="Conducting">
+                <label>Conducting:</label>
+                <input type="text" />
+            </div>
+            <div id="Pianist">
+                <label>Presiding:</label>
+                <input type="text" />
+            </div>
+            <div id="Chorster">
+                <label>Chorster:</label>
+                <input type="text" />
+            </div>
+            <div id="OpenHymn">
+                <label>Opening Hymn:</label>
+                <input type="text" />
+            </div>
+            <div id="Invocation">
+                <label>Invocation:</label>
+                <input type="text" />
+            </div>
+            <div id="Announcments">
+                <!--this will have buttons to input new sections for all necessary Announcments-->
+                <div class="announce-wrapper">
+                    <button class="add-announcment btn primary" onclick="addAnnouncment()">+ Add Announcment</button>
+                    <div>
+                        <input type="text" value="Move Ins" />
+                        <input type="text" value="New Members, come see a clerk after Sacrament Meeting." />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function addAnnouncment(){
+                $('.announce-wrapper').append(`<div>
+                        <input type="text" />
+                        <input type="text" />
+                    </div>`)
+            }
+        </script>
+    </body>
+</html>

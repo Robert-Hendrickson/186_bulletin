@@ -1,0 +1,52 @@
+body{
+    background-color: #DDDDDD;
+}
+.btn{
+    border: #000 1px solid;
+    border-radius: 8px;
+    display: inline-block;
+    padding: 8px;
+}
+.btn:hover{
+    cursor: pointer;
+}
+.btn.primary{
+    background-color: #0cbeff;
+}
+.inputWrapper{
+    width: 50%;
+    margin: 0 auto;
+    border: #000 2px solid;
+    border-radius: 8px;
+    padding: 16px;
+    > div{
+        width: 100%;
+        display: flex;
+        margin: 8px 0;
+        input {
+            width: 85%;
+        }
+        label {
+            width: 15%;
+            text-align: right;
+            padding: 0 8px;
+        }
+    }
+}
+.announce-wrapper{
+    border: #000 2px solid;
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+    > div {
+        display: flex;
+        margin: 8px 0;
+        input:first-child {
+            width: 10%;
+        }
+        input:nth-child(2){
+            width: 85%;
+            margin: 0 8px;
+        }
+    }
+}
