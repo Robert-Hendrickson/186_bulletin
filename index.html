@@ -40,14 +40,94 @@
                     </div>
                 </div>
             </div>
+            <div id="new-members">
+                <textarea id="new-members-list" placeholder="List of new memebers in the ward"></textarea>
+            </div>
+            <div id="buisness">
+                <!--add buttons for adding new section that will have a header box and a text box for data-->
+                <div class="buisness-wrapper">
+                    <button class="add-buisness btn primary" onclick="addBuisness()">+ Add Buisness</button>
+                    <div>
+                        <input type="text" placeholder="Buisness Header" />
+                        <textarea></textarea>
+                    </div>
+                </div>
+            </div>
+            <div id="steak-buisness">
+                <label>Steak Buisness</label>
+                <input type="text" />
+            </div>
+            <div id="SacramentHymn">
+                <label>Sacrament Hymn:</label>
+                <input type="text" />
+            </div>
+            <div id="Theme">
+                <label>Today's Theme:</label>
+                <input type="text" />
+            </div>
+            <div id="speaker1">
+                <label>Speaker:</label>
+                <input type="text" />
+            </div>
+            <div id="speaker2">
+                <label>Speaker:</label>
+                <input type="text" />
+            </div>
+            <div id="IntermediateHymn">
+                <label>Intermediate Hymn:</label>
+                <input type="text" />
+            </div>
+            <div id="speaker3">
+                <label>Speaker:</label>
+                <input type="text" />
+            </div>
+            <div id="ClosingHymn">
+                <label>Closing Hymn:</label>
+                <input type="text" />
+            </div>
+            <div id="Benediction">
+                <label>Benediction:</label>
+                <input type="text" />
+            </div>
+            <div id="next-weeks">
+                <h2>Next 3 Weeks</h2>
+                <week1>
+                    <label></label>
+                    <input type="text" />
+                </week1>
+                <week2>
+                    <label></label>
+                    <input type="text" />
+                </week2>
+                <week3>
+                    <label></label>
+                    <input type="text" />
+                </week3>
+            </div>
         </div>
         <script>
             function addAnnouncment(){
                 $('.announce-wrapper').append(`<div>
                         <input type="text" />
                         <input type="text" />
-                    </div>`)
+                    </div>`);
             }
+            function addBuisness(){
+                $('.buisness-wrapper').append(`<div>
+                        <input type="text" placeholder="Buisness Header" />
+                        <textarea></textarea>
+                    </div>`);
+            }
+            $(document).ready(function (){
+                let today = new Date();
+                let week1 = new Date(new Date().setDate(today.getDate() + 7));
+                let week2 = new Date(new Date().setDate(today.getDate() + 14));
+                let week3 = new Date(new Date().setDate(today.getDate() + 21));
+                var dateArray = [week1,week2,week3];
+                for(i=0;i<dateArray.length;i++){
+                    document.querySelector(`week${i+1} label`).innerText = `${dateArray[i].getMonth()+1}/${dateArray[i].getDate()}/${dateArray[i].getFullYear()}`;
+                };
+            });
         </script>
     </body>
 </html>

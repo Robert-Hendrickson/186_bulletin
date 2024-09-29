@@ -1,39 +1,39 @@
-body{
+body {
     background-color: #DDDDDD;
 }
-.btn{
+.btn {
     border: #000 1px solid;
     border-radius: 8px;
     display: inline-block;
     padding: 8px;
 }
-.btn:hover{
+.btn:hover {
     cursor: pointer;
 }
-.btn.primary{
+.btn.primary {
     background-color: #0cbeff;
 }
-.inputWrapper{
+.inputWrapper {
     width: 50%;
     margin: 0 auto;
     border: #000 2px solid;
     border-radius: 8px;
     padding: 16px;
-    > div{
+    > div {
         width: 100%;
         display: flex;
         margin: 8px 0;
         input {
-            width: 85%;
+            width: 80%;
         }
         label {
-            width: 15%;
+            width: 20%;
             text-align: right;
             padding: 0 8px;
         }
     }
 }
-.announce-wrapper{
+.announce-wrapper {
     border: #000 2px solid;
     border-radius: 8px;
     padding: 16px;
@@ -42,11 +42,49 @@ body{
         display: flex;
         margin: 8px 0;
         input:first-child {
-            width: 10%;
+            width: 20%;
         }
-        input:nth-child(2){
-            width: 85%;
+        input:nth-child(2) {
+            width: 80%;
             margin: 0 8px;
+        }
+    }
+}
+#new-members-list {
+    min-height: 150px;
+    width: 100%;
+}
+.buisness-wrapper {
+    border: #000 2px solid;
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+    > div {
+        margin: 8px 0;
+        border: #000 2px solid;
+        padding: 8px;
+        border-radius: 8px;
+        input {
+            width: 99%;
+            height: 25px;
+            margin: 8px 0;
+        }
+        textarea {
+            width: 99%;
+            height: 95px;
+        }
+    }
+}
+#next-weeks {
+    display: block;
+    week1,week2,week3 {
+        display: flex;
+        margin: 8px 0;
+        label {
+            width: 20%;
+        }
+        input {
+            width: 80%;
         }
     }
 }
