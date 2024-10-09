@@ -7,7 +7,7 @@ $(document).ready(function (){
         $('#OpenHymn input')[0].value = 'openhymn';
         $('#Invocation input')[0].value = 'invocation';
         $('#new-members-list')[0].value = 'welcome new members!';
-        $('#steak-buisness input')[0].value = 'steakbuisness';
+        $('#stake-buisness input')[0].value = 'stakebuisness';
         $('#SacramentHymn input')[0].value = 'sacramenthymn';
         $('#Theme input')[0].value = 'theme';
         $('#speaker1 input')[0].value = 'speaker1';

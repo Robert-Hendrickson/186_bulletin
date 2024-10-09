@@ -50,6 +50,11 @@ body {
         }
     }
 }
+.preview-button {
+    position: fixed;
+    right: 16px;
+    top: 16px;
+}
 #new-members-list {
     min-height: 150px;
     width: 100%;
