@@ -1,8 +1,19 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
         <script>
-            let preview_data = JSON.parse(decodeURI(document.location.search.substring(1).split("=")[1]));
+            let preview_data;
+            if(document.location.search){
+                preview_data = JSON.parse(decodeURI(document.location.search.substring(1).split("=")[1]));
+            }
+            if(typeof(preview_data) != 'object') {
+                $(document).ready(function (){
+                    document.querySelector('body').innerHTML = `<div class="error">Something is wrong with the data provided. Please Try again.</div>`;
+                });
+            } else {
+                //build
+            }
         </script>
     </head>
     <body>
