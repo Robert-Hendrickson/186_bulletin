@@ -2,14 +2,36 @@ function addAnnouncment(){
     $('.announce-wrapper').append(`<div>
             <input type="text" />
             <input type="text" />
+            <span onclick="$(this).parent().remove()">X</span>
         </div>`);
 };
 function addBuisness(){
     $('.buisness-wrapper').append(`<div>
+            <span onclick="$(this).parent().remove()">X</span>
             <input type="text" placeholder="Buisness Header" />
             <textarea></textarea>
         </div>`);
 };
+function getAnnouncments() {
+    let announce_json = {};
+    $('.announce-wrapper > div').each(function (index,el) {
+        announce_json[`announce_${index + 1}`] = {
+            title: el.children[0].value,
+            content: el.children[1].value
+        };
+    });
+    return announce_json;
+};
+function getWardBuisness(){
+    let buisness_json = {};
+    $('.buisness-wrapper > div').each(function (index,el) {
+        buisness_json[`announce_${index + 1}`] = {
+            title: el.children[0].value,
+            content: el.children[1].value
+        };
+    });
+    return buisness_json;
+}
 function sendPreviewData(){
     var preview_json = {
         presiding: $('#Presiding input')[0].value,
@@ -18,9 +40,7 @@ function sendPreviewData(){
         chorister: $('#Chorister input')[0].value,
         openhymn: $('#OpenHymn input')[0].value,
         invocation: $('#Invocation input')[0].value,
-        announcments: getAnnouncments(),
         newmembers: $('#new-members-list')[0].value,
-        wardbuisness: getWardBuisness(),
         stakebuisness: $('#stake-buisness input')[0].value,
         sacramenthymn: $('#SacramentHymn input')[0].value,
         theme: $('#Theme input')[0].value,
@@ -43,29 +63,15 @@ function sendPreviewData(){
             content: $('#next-weeks week3').children()[1].value
         },
     }
+    if ($('.announce-wrapper > div').length > 0) {
+        preview_json.announcments = getAnnouncments();
+    }
+    if ($('.buisness-wrapper > div').length > 0) {
+        preview_json.wardbuisness = getWardBuisness();
+    }
     console.log(preview_json);
     window.open('./preview.html?data='+ JSON.stringify(preview_json),'_blank')
 };
-function getAnnouncments() {
-    let announce_json = {};
-    $('.announce-wrapper > div').each(function (index,el) {
-        announce_json[`announce_${index + 1}`] = {
-            title: el.children[0].value,
-            content: el.children[1].value
-        };
-    });
-    return announce_json;
-};
-function getWardBuisness(){
-    let buisness_json = {};
-    $('.buisness-wrapper > div').each(function (index,el) {
-        buisness_json[`announce_${index + 1}`] = {
-            title: el.children[0].value,
-            content: el.children[1].value
-        };
-    });
-    return buisness_json;
-}
 $(document).ready(function (){
     let today = new Date();
     let week1 = new Date(new Date().setDate(today.getDate() + 7));

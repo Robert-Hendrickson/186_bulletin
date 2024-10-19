@@ -2,6 +2,8 @@
 <html>
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="./build_ctrl/build.js"></script>
         <script>
             let preview_data;
             if(document.location.search){
@@ -12,11 +14,13 @@
                     document.querySelector('body').innerHTML = `<div class="error">Something is wrong with the data provided. Please Try again.</div>`;
                 });
             } else {
-                //build
+                $(document).ready(function (){
+                    buildPage(preview_data);
+                });
             }
         </script>
     </head>
     <body>
-        <div></div>
+        <pagebuild></pagebuild>
     </body>
 </html>

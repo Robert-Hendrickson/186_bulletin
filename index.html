@@ -36,10 +36,12 @@
             <div id="Announcments">
                 <!--this will have buttons to input new sections for all necessary Announcments-->
                 <div class="announce-wrapper">
+                    <h2 style="text-align: center;">Ward Announcments</h2>
                     <button class="add-announcment btn primary" onclick="addAnnouncment()">+ Add Announcment</button>
                     <div>
                         <input type="text" value="Move Ins" />
                         <input type="text" value="New Members, come see a clerk after Sacrament Meeting." />
+                        <span onclick="$(this).parent().remove()">X</span>
                     </div>
                 </div>
             </div>
@@ -49,11 +51,8 @@
             <div id="buisness">
                 <!--add buttons for adding new section that will have a header box and a text box for data-->
                 <div class="buisness-wrapper">
+                    <h2 style="text-align: center;">Ward Buisness</h2>
                     <button class="add-buisness btn primary" onclick="addBuisness()">+ Add Buisness</button>
-                    <div>
-                        <input type="text" placeholder="Buisness Header" />
-                        <textarea></textarea>
-                    </div>
                 </div>
             </div>
             <div id="stake-buisness">

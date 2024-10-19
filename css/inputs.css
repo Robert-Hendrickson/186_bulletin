@@ -48,6 +48,9 @@ body {
             width: 80%;
             margin: 0 8px;
         }
+        span:hover {
+            cursor: pointer;
+        }
     }
 }
 .preview-button {
@@ -77,6 +80,12 @@ body {
         textarea {
             width: 99%;
             height: 95px;
+        }
+        span {
+            float: right;
+        }
+        span:hover {
+            cursor: pointer;
         }
     }
 }
