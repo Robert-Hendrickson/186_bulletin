@@ -73,6 +73,7 @@ function sendPreviewData(){
     window.open('./preview.html?data='+ JSON.stringify(preview_json),'_blank')
 };
 $(document).ready(function (){
+    //todo need to make sure this is set for the next upcoming sunday if not already sunday.
     let today = new Date();
     let week1 = new Date(new Date().setDate(today.getDate() + 7));
     let week2 = new Date(new Date().setDate(today.getDate() + 14));
