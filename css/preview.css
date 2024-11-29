@@ -1,6 +1,7 @@
 body{
     background-image: linear-gradient(135deg,#007DA5,#63AFC7,#BBDCE7);
     min-height: 98vh;
+    font-size: 22px;
 }
 .bulletin-header,.pagebuild{
     background-color: #fff;
@@ -27,17 +28,11 @@ body{
     }
 }
 /*content styles*/
-.pagebuild{
-
-}
 .line-wrapper{
     display: flex;
     justify-content: space-between;
     padding: 2px 8px;
     white-space: nowrap;
-}
-.line-title{
-
 }
 .line-separator{
     flex-grow: 1;
@@ -52,9 +47,6 @@ body{
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
-}
-.line-input{
-
 }
 /*media queries*/
 @media(width < 1200px){
