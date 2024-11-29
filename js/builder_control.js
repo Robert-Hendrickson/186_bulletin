@@ -75,9 +75,13 @@ function sendPreviewData(){
 $(document).ready(function (){
     //todo need to make sure this is set for the next upcoming sunday if not already sunday.
     let today = new Date();
-    let week1 = new Date(new Date().setDate(today.getDate() + 7));
-    let week2 = new Date(new Date().setDate(today.getDate() + 14));
-    let week3 = new Date(new Date().setDate(today.getDate() + 21));
+    let time_to_sunday = 0;
+    if (today.getDay() != 0 ) {
+        time_to_sunday = today.getDay();
+    }
+    let week1 = new Date(new Date().setDate(today.getDate() + (7 - time_to_sunday)));
+    let week2 = new Date(new Date().setDate(today.getDate() + (14 - time_to_sunday)));
+    let week3 = new Date(new Date().setDate(today.getDate() + (21 - time_to_sunday)));
     var dateArray = [week1,week2,week3];
     for(i=0;i<dateArray.length;i++){
         document.querySelector(`week${i+1} label`).innerText = `${dateArray[i].getMonth()+1}/${dateArray[i].getDate()}/${dateArray[i].getFullYear()}`;
