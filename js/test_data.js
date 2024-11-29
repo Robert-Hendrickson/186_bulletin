@@ -1,5 +1,5 @@
 $(document).ready(function (){
-    if(document.location.href.match(/localhost/).length){
+    if(document.location.href.match(/localhost/).length || document.location.search.match(/^\?=test/)){
         $('#Presiding input')[0].value = 'presiding',
         $('#Conducting input')[0].value = 'conducting';
         $('#Pianist input')[0].value = 'pianist';
