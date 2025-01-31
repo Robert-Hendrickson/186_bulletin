@@ -15,7 +15,9 @@ Invocation
 ## Announcements ##
     Move-ins
     ward/stake business
-
+??should we section these as smaller under the announcements area??
+could utalize the line-separator class in banner to put dashes on either side of it.
+<div class="announcments"><div class="line-wrapper"><div class="line-separator"></div><div class="line-banner">Announcements</div><div class="line-separator"></div></div></div>
 
 Sacrament Hymn
 ## Sacrament Header? ##
@@ -23,7 +25,12 @@ Sacrament Hymn
 
 
 
-
+new class for banner messages
+    .line-banner{
+        font-weight: bold;
+        text-align: center;
+        font-size: 24px;
+    }
 
 
 
